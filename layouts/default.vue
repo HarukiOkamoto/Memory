@@ -4,7 +4,7 @@
 <template>
     <div class="head">
         <h1>Memorial Memory</h1>
-        <h4>in X'max</h4>
+        <h4>X'max</h4>
         <div class="year">
             <h2>2023</h2>
         </div>
@@ -20,18 +20,20 @@
 }
 
 .head h1 {
+    padding-top: 10px;
     font-weight: bold;
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     letter-spacing: 1px;
 }
 
 .head h2 {
-    padding: 10px;
+    padding-top: 20px;
 }
 
 .head h4 {
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
-    font-size: 20px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 </style>
 
