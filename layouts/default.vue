@@ -24,16 +24,19 @@
     font-weight: bold;
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .head h2 {
-    padding-top: 20px;
+    padding-top: 40px;
+    text-align: center;
 }
 
 .head h4 {
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 15px;
     letter-spacing: 1px;
+    text-align: center;
 }
 </style>
 
