@@ -8,7 +8,42 @@ const isClicked = (day: string) => day === clickedDay.value;
 // refにクリックされた日付を返す
 const clickDay = (day: string) => {
     clickedDay.value = day;
+    setImgUrl();
 };
+
+//画像用のURL ref
+const imageUrl = ref<string | null>(null);
+//画像表示処理
+const setImgUrl = async () => {
+    try {
+        // import.meta.urlは現在のファイルのURLを返す
+        const url = new URL(`../assets/images/January/${clickedDay.value}.jpg`, import.meta.url);
+        //refに画像のURLを返す
+        imageUrl.value = url.href;
+        console.log(url);
+    } catch (e) {
+        console.error(e);
+        imageUrl.value = '';
+    } finally {
+        console.log(clickedDay.value);
+    }
+};
+
+onMounted(() => {// 初回処理
+    setImgUrl();
+});
+
+//フェードイン処理
+watch(() => imageUrl.value, () => {
+    //画像が切り替わったときのCSSアニメーションをトリガ
+    const imgElement = document.getElementById('myImg');
+    console.log(imgElement)
+    if (imgElement) {
+        imgElement.classList.remove('img-gallery');
+        void imgElement.offsetWidth;
+        imgElement.classList.add('img-gallery');
+    }
+})
 </script>
 
 <template>
@@ -163,11 +198,14 @@ const clickDay = (day: string) => {
                 </td>
             </tr>
         </table>
-
-        <img v-if="isClicked('day0')" src="@/assets/img/1-day0.jpg">
-
-
     </div>
+
+    <section class="memory-img">
+        <div class="img-area">
+            <img v-if="isClicked(clickedDay)" :src="imageUrl" class="img-gallery" id="myImg" alt=""
+                onerror="this.onerror = null; this.src='';">
+        </div>
+    </section>
 </template>
 
 <style>
@@ -179,7 +217,7 @@ const clickDay = (day: string) => {
 
 /* 孫 */
 .week {
-    width: 50%;
+    width: 40%;
     height: auto;
 }
 
@@ -187,50 +225,56 @@ const clickDay = (day: string) => {
     text-align: center;
     position: relative;
     cursor: pointer;
+    font-size: 20px;
 }
 
-/* 透明な円 */
-.week .circle {
+/* 画像表示 */
+.memory-img {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-area {
+    position: relative;
+    display: inline-block;
+}
+
+.img-area::after {
+    display: block;
+    content: '';
+    z-index: 3;
+    border: 3px solid white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 1.5em;
-    /* 1.5emのサイズ */
-    height: 1.5em;
-    /* 1.5emのサイズ */
-    visibility: hidden;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    top: 10px;
+    left: 10px;
 }
 
-/* 日付クリック時のアクション */
-.clicked-class .circle {
-    visibility: visible;
+.img-area img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+
 }
 
-/* メディアクエリ - スマートフォン向け */
-@media screen and (max-width: 767px) {
-    .week {
-        width: 80%;
-        /* 幅を80%に調整 */
+.img-gallery {
+    opacity: 0;
+    animation: fadein 1s ease-out forwards;
+    width: auto;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
     }
-}
 
-/* メディアクエリ - タブレット向け */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .week {
-        width: 60%;
-        /* 幅を60%に調整 */
-    }
-}
-
-/* メディアクエリ - デスクトップ向け */
-@media screen and (min-width: 1025px) {
-    .week {
-        width: 40%;
-        /* 幅を50%に調整 */
+    100% {
+        opacity: 1;
     }
 }
 </style>
