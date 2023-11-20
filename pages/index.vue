@@ -248,7 +248,7 @@ watch(() => imageUrl.value, () => {
 /* メディアクエリ - タブレット向け */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .week {
-        width: 30%;
+        width: 50%;
     }
 }
 

@@ -127,9 +127,9 @@ body {
   }
 
   .img-area img {
-    width: 300px;
+    width: 250px;
     /* スマホの場合の幅は300pxに変更 */
-    height: 300px;
+    height: 250px;
     /* スマホの場合の高さは300pxに変更 */
   }
 }
@@ -139,6 +139,11 @@ body {
   .calendar {
     width: 80%;
     /* 幅を60%に調整 */
+  }
+
+  .img-area img {
+    width: 400px;
+    height: 400px;
   }
 }
 
