@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      viewport: 'width=deveice-width, initial-scale-1',
+      viewport: 'width=deveice-width, initial-scale=1',
       link: [
         {
           rel: "precconect",

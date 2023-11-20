@@ -44,6 +44,7 @@ watch(() => imageUrl.value, () => {
         imgElement.classList.add('img-gallery');
     }
 })
+
 </script>
 
 <template>
@@ -55,9 +56,11 @@ watch(() => imageUrl.value, () => {
         <p class="arrow">&gt;</p>
     </div>
 
-    <div class="calendar-container">
+    <section class="calendar-container">
         <table class="calendar">
             <tr class="week">
+                <td> </td>
+                <td> </td>
                 <td :class="{ 'clicked-class': isClicked('day0') }" @click="clickDay('day0')">
                     <div class="circle"></div>
                     0
@@ -98,6 +101,8 @@ watch(() => imageUrl.value, () => {
                     <div class="circle"></div>
                     9
                 </td>
+                <td> </td>
+                <td> </td>
             </tr>
 
 
@@ -130,6 +135,7 @@ watch(() => imageUrl.value, () => {
                     <div class="circle"></div>
                     16
                 </td>
+
             </tr>
 
             <tr class="week">
@@ -164,6 +170,8 @@ watch(() => imageUrl.value, () => {
             </tr>
 
             <tr class="week">
+                <td> </td>
+                <td> </td>
                 <td :class="{ 'clicked-class': isClicked('day24') }" @click="clickDay('day24')">
                     <div class="circle"></div>
                     24
@@ -196,9 +204,11 @@ watch(() => imageUrl.value, () => {
                     <div class="circle"></div>
                     31
                 </td>
+                <td> </td>
+                <td> </td>
             </tr>
         </table>
-    </div>
+    </section>
 
     <section class="memory-img">
         <div class="img-area">
@@ -217,7 +227,7 @@ watch(() => imageUrl.value, () => {
 
 /* 孫 */
 .week {
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 
@@ -225,56 +235,27 @@ watch(() => imageUrl.value, () => {
     text-align: center;
     position: relative;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-/* 画像表示 */
-.memory-img {
-    width: 100%;
-    padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-area {
-    position: relative;
-    display: inline-block;
-}
-
-.img-area::after {
-    display: block;
-    content: '';
-    z-index: 3;
-    border: 3px solid white;
-    position: absolute;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
-    top: 10px;
-    left: 10px;
-}
-
-.img-area img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
-.img-gallery {
-    opacity: 0;
-    animation: fadein 1s ease-out forwards;
-    width: auto;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
+/* メディアクエリ - スマートフォン向け */
+@media screen and (max-width: 767px) {
+    .week {
+        width: 60%;
     }
+}
 
-    100% {
-        opacity: 1;
+/* メディアクエリ - タブレット向け */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .week {
+        width: 30%;
+    }
+}
+
+/* メディアクエリ - デスクトップ向け */
+@media screen and (min-width: 1025px) {
+    .week {
+        width: 30%;
     }
 }
 </style>

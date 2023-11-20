@@ -39,12 +39,14 @@ body {
 
 /* 日付 */
 /* 親要素 */
-.calendar {
-  /* min-width: 70%;
-  max-width: 80%; */
+.calendar-container {
   margin: 0 auto;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   height: 100%;
+}
+
+.calendar {
+  margin: 0 auto;
 }
 
 /* 透明な円 */
@@ -66,6 +68,55 @@ body {
 /* 日付クリック時のアクション */
 .clicked-class .circle {
   visibility: visible;
+}
+
+/* 画像表示 */
+.memory-img {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-area {
+  position: relative;
+}
+
+.img-area::after {
+  display: block;
+  content: '';
+  z-index: 3;
+  border: 3px solid white;
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+}
+
+.img-area img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.img-gallery {
+  opacity: 0;
+  animation: fadein 1s ease-out forwards;
+  width: auto;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* メディアクエリ - スマートフォン向け */
@@ -98,9 +149,9 @@ body {
     /* 幅を50%に調整 */
   }
 
-  .img-area {
-    width: 500px;
-    height: 500px;
+  .img-area img {
+    width: 400px;
+    height: 400px;
   }
 }
-</style>1
+</style>
