@@ -1,0 +1,4 @@
+<template>
+    <LastYaerAutumnSeason />
+    <LastYaerAutumnContent />
+</template>

@@ -1,0 +1,4 @@
+<template>
+    <JanuaryMonth />
+    <JanuaryContent />
+</template>
