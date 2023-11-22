@@ -1,0 +1,4 @@
+<template>
+    <SpringSeason />
+    <SpringContent />
+</template>

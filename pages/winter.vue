@@ -1,4 +1,4 @@
 <template>
-    <JanuaryMonth />
-    <JanuaryContent />
+    <WinterSeason />
+    <WinterContent />
 </template>

@@ -1,13 +1,14 @@
 <template>
     <div class="year">
         <h2>2022</h2>
+        <h3>9月 / 10月 / 11月</h3>
     </div>
     <div class="month">
         <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'index' }">
             <p class="arrow">&lt;</p>
         </NuxtLink>
         <h2>Autmun</h2>
-        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'index' }">
+        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'winter' }">
             <p class="arrow">&gt;</p>
         </NuxtLink>
     </div>
@@ -19,6 +20,11 @@ h2 {
     padding-top: 40px;
     text-align: center;
 }
+
+h3 {
+    text-align: center;
+}
+
 
 /* 月 */
 .month {

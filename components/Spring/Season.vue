@@ -1,10 +1,13 @@
 <template>
     <div class="year">
         <h2>2023</h2>
+        <h3>3月 / 4月 / 5月</h3>
     </div>
     <div class="month">
-        <p class="arrow">&lt;</p>
-        <h2>January</h2>
+        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'winter' }">
+            <p class="arrow">&lt;</p>
+        </NuxtLink>
+        <h2>Spring</h2>
         <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'summer' }">
             <p class="arrow">&gt;</p>
         </NuxtLink>
@@ -15,6 +18,10 @@
 /* 年 */
 h2 {
     padding-top: 40px;
+    text-align: center;
+}
+
+h3 {
     text-align: center;
 }
 

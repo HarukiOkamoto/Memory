@@ -17,7 +17,7 @@ const imageUrl = ref<string | null>(null);
 const setImgUrl = async () => {
     try {
         // import.meta.urlは現在のファイルのURLを返す
-        const url = new URL(`../../assets/images/January/${clickedDay.value}.jpg`, import.meta.url);
+        const url = new URL(`../../assets/images/Summer/${clickedDay.value}.jpg`, import.meta.url);
         //refに画像のURLを返す
         imageUrl.value = url.href;
         console.log(url);

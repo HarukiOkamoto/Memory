@@ -1,0 +1,4 @@
+<template>
+    <SummerSeason />
+    <SummerContent />
+</template>
