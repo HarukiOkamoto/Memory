@@ -1,7 +1,7 @@
 <template>
     <div class="year">
         <h2>2022</h2>
-        <h3>6月 / 7月 / 8月</h3>
+        <h4>6月 / 7月 / 8月</h4>
     </div>
     <div class="month">
         <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'autumn' }">
@@ -17,11 +17,11 @@
 <style>
 /* 年 */
 h2 {
-    padding-top: 40px;
+    padding-top: 10px;
     text-align: center;
 }
 
-h3 {
+h4 {
     text-align: center;
 }
 

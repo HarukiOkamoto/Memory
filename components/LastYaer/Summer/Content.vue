@@ -44,7 +44,6 @@ watch(() => imageUrl.value, () => {
         imgElement.classList.add('img-gallery');
     }
 })
-
 </script>
 
 <template>

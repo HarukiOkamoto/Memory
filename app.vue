@@ -9,8 +9,12 @@
 
 <style>
 body {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255);
   color: black;
   font-family: Arial;
+  /* background-image: url("assets/images/backImg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 </style>
