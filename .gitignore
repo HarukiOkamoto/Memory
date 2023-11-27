@@ -22,16 +22,3 @@ logs
 .env.*
 !.env.example
 
-# ----- ファイルの最後に追加 -----
-assets
-components
-layouts
-pages
-static
-store
-.editorconfig
-.eslintrc.js
-jsconfig.json
-nuxt.config.js
-package-lock.json
-package.json
