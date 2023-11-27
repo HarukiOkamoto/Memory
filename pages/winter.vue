@@ -1,4 +1,0 @@
-<template>
-    <WinterSeason />
-    <WinterContent />
-</template>

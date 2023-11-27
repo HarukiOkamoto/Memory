@@ -8,7 +8,7 @@
             <p class="arrow">&lt;</p>
         </NuxtLink>
         <h2>Autmun</h2>
-        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'winter' }">
+        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'winter2022' }">
             <p class="arrow">&gt;</p>
         </NuxtLink>
     </div>

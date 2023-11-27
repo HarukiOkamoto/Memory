@@ -20,14 +20,38 @@ const setImgUrl = async () => {
         const url = new URL(`../../../assets/images/2022/Summer/${clickedDay.value}.jpg`, import.meta.url);
         //refに画像のURLを返す
         imageUrl.value = url.href;
-        console.log(url);
+        await preloadImages();
     } catch (e) {
         console.error(e);
         imageUrl.value = '';
-    } finally {
-        console.log(clickedDay.value);
     }
 };
+
+//画像のプリロード
+const totalImg = 24;
+
+const preloadImages = async () => {
+    const promises = [];
+
+    for (let i = 0; i < totalImg; i++) {
+        const img = new Image();
+        // ファイルパスを正しく生成する
+        const imgPath = `../../../assets/images/2022/Summer/day${i}.jpg`;
+        img.src = new URL(imgPath, import.meta.url).href;
+        promises.push(new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+        }));
+    }
+
+    try {
+        await Promise.all(promises);
+        console.log("Images preloaded successfully!");
+    } catch (error) {
+        console.error("Error preloading images:", error);
+    }
+};
+
 
 onMounted(() => {// 初回処理
     setImgUrl();
