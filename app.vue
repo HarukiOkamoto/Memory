@@ -58,4 +58,17 @@ footer {
   font-weight: bold;
   color: rgb(255, 255, 255);
 }
+
+@media screen and (max-width: 767px) {
+  .footer h1 {
+    font-family: 'EB Garamond';
+    font-weight: 600;
+    letter-spacing: .5px;
+  }
+
+  .footer h4 {
+    font-family: 'EB Garamond';
+    letter-spacing: 1px;
+  }
+}
 </style>

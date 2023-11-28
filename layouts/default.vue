@@ -48,4 +48,18 @@
     font-family: GoudyOldStyleBold;
     src: url("../assets/fonts/GoudyOldStyleBold.ttf") format("truetype");
 }
+
+/* メディアクエリ - スマートフォン向け */
+@media screen and (max-width: 767px) {
+    .head h1 {
+        font-family: 'EB Garamond';
+        font-weight: 600;
+        letter-spacing: .5px;
+    }
+
+    .head h4 {
+        font-family: 'EB Garamond';
+        letter-spacing: 1px;
+    }
+}
 </style>
