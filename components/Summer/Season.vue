@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useHead({
+    title: "2023 | Summer"
+})
+</script>
 <template>
     <div class="year">
         <h2>2023</h2>

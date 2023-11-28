@@ -38,20 +38,20 @@ footer {
   color: black;
   text-align: center;
   padding: 10px;
-  font-family: GoudyOldStyleBold, Garamond, "Big Caslon", "Times New Roman", serif;
+  font-family: GoudyOldStyleBold, 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
   font-weight: bold;
 }
 
 .footer h1 {
   font-weight: bold;
-  font-family: GoudyOldStyleBold, Garamond, "Big Caslon", "Times New Roman", serif;
+  font-family: GoudyOldStyleBold, 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
   text-align: center;
   font-size: 20px;
   color: rgb(255, 255, 255);
 }
 
 .footer h4 {
-  font-family: GoudyOldStyleBold, Garamond, "Big Caslon", "Times New Roman", serif;
+  font-family: GoudyOldStyleBold, 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
   font-size: 10px;
   letter-spacing: 1.5px;
   text-align: center;

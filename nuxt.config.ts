@@ -17,6 +17,11 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Inter&display=swap",
           crossorigin: "",
+        },
+        {
+          href: "http://fonts.googleapis.com/css?family=EB+Garamond",
+          rel: "stylesheet",
+          type: "text/css",
         }
       ]
     }

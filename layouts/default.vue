@@ -29,13 +29,13 @@
 .head h1 {
     padding-top: 10px;
     font-weight: bold;
-    font-family: GoudyOldStyleBold, Garamond, "Big Caslon", "Times New Roman", serif;
+    font-family: GoudyOldStyleBold, 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
     text-align: center;
     font-size: 25px;
 }
 
 .head h4 {
-    font-family: GoudyOldStyleBold, Garamond, "Big Caslon", "Times New Roman", serif;
+    font-family: GoudyOldStyleBold, 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 15px;
     letter-spacing: 1.5px;
     text-align: center;
@@ -45,7 +45,7 @@
 
 /* フォント */
 @font-face {
-    font-family: "GoudyOldStyleBold";
+    font-family: GoudyOldStyleBold;
     src: url("../assets/fonts/GoudyOldStyleBold.ttf") format("truetype");
 }
 </style>
