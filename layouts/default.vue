@@ -52,14 +52,15 @@
 /* メディアクエリ - スマートフォン向け */
 @media screen and (max-width: 767px) {
     .head h1 {
-        font-family: 'EB Garamond';
-        font-weight: 600;
+        font-family: "TimesNewRomanPSMT", 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
+        font-weight: 500;
         letter-spacing: .5px;
     }
 
     .head h4 {
-        font-family: 'EB Garamond';
+        font-family: "TimesNewRomanPSMT", 'EB Garamond', Garamond, "Big Caslon", "Times New Roman", serif;
         letter-spacing: 1px;
+        font-size: 12px;
     }
 }
 </style>
