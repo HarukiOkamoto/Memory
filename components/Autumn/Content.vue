@@ -192,7 +192,64 @@ watch(() => imageUrl.value, () => {
                 onerror="this.onerror = null; this.src='';">
         </div>
     </section>
+
+    <div class="leaf">&#x1f341;</div>
+    <div class="leaf leaf2nd">&#x1f341;</div>
 </template>
 
+<style>
+.leaf {
+    /*雪の色*/
+    color: rgb(255, 60, 60);
+    /*雪の大きさ*/
+    font-size: 10px;
+    /*初期位置*/
+    position: fixed;
+    top: -5%;
+    /*雪を適当な幅で降らせる*/
+    text-shadow:
+        5vw -100px 2px,
+        10vw -400px 3px,
+        20vw -500px 4px,
+        30vw -580px 1px,
+        39vw -250px 2px,
+        42vw -340px 5px,
+        56vw -150px 2px,
+        63vw -180px 0,
+        78vw -220px 4px,
+        86vw -320px 9px,
+        94vw -170px 7px;
+    /*雪アニメーション1*/
+    animation: roll 5s linear infinite;
+}
+
+/*2つめの雪アニメーション*/
+.leaf2nd {
+    animation: anim 8s linear infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(20deg);
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes anim {
+    100% {
+        color: transparent;
+        top: 150%;
+    }
+}
+</style>
 
 

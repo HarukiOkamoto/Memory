@@ -281,6 +281,7 @@ watch(() => imageUrl.value, () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .img-area {
@@ -304,7 +305,6 @@ watch(() => imageUrl.value, () => {
     margin: 0 auto;
     max-width: 100%;
     max-height: 100%;
-
 }
 
 .img-gallery {
@@ -313,6 +313,7 @@ watch(() => imageUrl.value, () => {
     width: auto;
 
 }
+
 
 @keyframes fadein {
     0% {
