@@ -9,7 +9,7 @@ useHead({
         <h4>6月 / 7月 / 8月</h4>
     </div>
     <div class="month">
-        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'autumn' }">
+        <NuxtLink tag="div" class="N-link" v-bind:to="{ name: 'winter' }">
             <p class="arrow">&lt;</p>
         </NuxtLink>
         <h2>Summer</h2>
