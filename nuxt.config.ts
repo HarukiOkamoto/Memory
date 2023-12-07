@@ -22,6 +22,11 @@ export default defineNuxtConfig({
           href: "http://fonts.googleapis.com/css?family=EB+Garamond",
           rel: "stylesheet",
           type: "text/css",
+        },
+        {
+          href: "https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap",
+          rel: "stylesheet",
+          type: "text/css",
         }
       ]
     }

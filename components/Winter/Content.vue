@@ -68,6 +68,16 @@ watch(() => imageUrl.value, () => {
     }
 })
 
+//モーダルウィンドウ
+const isModalOpen = ref(false);
+
+const openModal = () => {
+    isModalOpen.value = true;
+}
+
+const closeModal = () => {
+    isModalOpen.value = false;
+}
 </script>
 
 <template>
@@ -150,7 +160,6 @@ watch(() => imageUrl.value, () => {
                     <div class="circle"></div>
                     16
                 </td>
-
             </tr>
 
             <tr class="week">
@@ -186,6 +195,13 @@ watch(() => imageUrl.value, () => {
         </table>
     </section>
 
+    <div class="modal-area">
+        <button class="modal-font" @click="isModalOpen = true">24</button>
+        <transition name="fade">
+            <Modal v-if="isModalOpen" @close="closeModal"></Modal>
+        </transition>
+    </div>
+
     <section class="memory-img">
         <div class="img-area">
             <img v-if="isClicked(clickedDay)" :src="imageUrl" class="img-gallery" id="myImg" alt=""
@@ -198,6 +214,28 @@ watch(() => imageUrl.value, () => {
 </template>
 
 <style>
+.modal-area {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.modal-font {
+    font-size: 25px;
+    width: fit-content;
+}
+
+/* モーダルのアニメーション */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
 .snow {
     /*雪の色*/
     color: rgb(255, 250, 252);
@@ -248,6 +286,13 @@ watch(() => imageUrl.value, () => {
     100% {
         color: transparent;
         top: 150%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        /* スマホの時の開始位置 */
+        top: 2%;
     }
 }
 </style>

@@ -291,7 +291,7 @@ watch(() => imageUrl.value, () => {
 .img-area::after {
     display: block;
     content: '';
-    z-index: 3;
+    z-index: 0;
     border: 3px solid white;
     position: absolute;
     width: calc(100% - 20px);
