@@ -41,10 +41,12 @@
                     <hr>
                     <p>伝わるといいな〜。</p>
                     <hr>
-                    <p>しっかりプレゼント用意したので、読み終わったら教えてください。</p>
+                    <p>"しっかり"プレゼント用意したので、読み終わったら</p>
+                    <hr>
+                    <p> 教えてください。笑</p>
                     <hr>
                     <div class="ps">
-                        <p>ps. 来年はりおからのサプライズも楽しみにしてますね＾＾(気にしないでね笑)</p>
+                        ps. 来年はりおからのサプライズも楽しみにしてますね＾＾(気にしないでね笑)
                     </div>
                 </div>
                 <div class="close-button">
@@ -81,6 +83,10 @@ const close = () => {
 
 .message h3 {
     margin: 10px;
+    font-family: 'Zen Kurenaido';
+}
+
+.ps {
     font-family: 'Zen Kurenaido';
 }
 
@@ -151,8 +157,8 @@ const close = () => {
         font-size: 13px;
     }
 
-    .ps {
-        font-size: 8px;
+    .message .ps {
+        font-size: 9px;
     }
 }
 </style>
