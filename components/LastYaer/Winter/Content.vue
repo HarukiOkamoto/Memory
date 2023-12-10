@@ -8,8 +8,12 @@ const isClicked = (day: string) => day === clickedDay.value;
 // refにクリックされた日付を返す
 const clickDay = (day: string) => {
     clickedDay.value = day;
-    setImgUrl();
 };
+
+onMounted(async () => {// 初回処理
+    await preloadImages();
+    setImgUrl();
+});
 
 //画像用のURL ref
 const imageUrl = ref<string | null>(null);
@@ -20,7 +24,6 @@ const setImgUrl = async () => {
         const url = new URL(`../../../assets/images/2022/Winter/${clickedDay.value}.jpg`, import.meta.url);
         //refに画像のURLを返す
         imageUrl.value = url.href;
-        await preloadImages();
     } catch (e) {
         console.error(e);
         imageUrl.value = '';
@@ -51,10 +54,6 @@ const preloadImages = async () => {
         console.error("Error preloading images:", error);
     }
 };
-
-onMounted(() => {// 初回処理
-    setImgUrl();
-});
 
 //フェードイン処理
 watch(() => imageUrl.value, () => {
