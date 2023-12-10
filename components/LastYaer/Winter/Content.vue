@@ -8,6 +8,7 @@ const isClicked = (day: string) => day === clickedDay.value;
 // refにクリックされた日付を返す
 const clickDay = (day: string) => {
     clickedDay.value = day;
+    setImgUrl();
 };
 
 onMounted(async () => {// 初回処理
@@ -18,7 +19,7 @@ onMounted(async () => {// 初回処理
 //画像用のURL ref
 const imageUrl = ref<string | null>(null);
 //画像表示処理
-const setImgUrl = async () => {
+const setImgUrl = () => {
     try {
         // import.meta.urlは現在のファイルのURLを返す
         const url = new URL(`../../../assets/images/2022/Winter/${clickedDay.value}.jpg`, import.meta.url);
